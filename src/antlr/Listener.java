@@ -249,5 +249,43 @@ public class Listener extends LangageBaseListener {
 	public void exitScan2(LangageParser.Scan2Context ctx) {
 		scan = false;
 	}
+
+
+
+	@Override
+	public void exitAssig2(LangageParser.Assig2Context ctx) {
+		String id = ctx.getChild(0).getText();
+		Token idToken = ((TerminalNode) ctx.ID()).getSymbol();
+		int line = idToken.getLine();
+		int column = idToken.getCharPositionInLine();
+		s.Nondeclarer(id, line, column);
+	}
+
+	@Override
+	public void exitAssig3(LangageParser.Assig3Context ctx) {
+		String id = ctx.getChild(0).getText();
+		Token idToken = ((TerminalNode) ctx.ID()).getSymbol();
+		int line = idToken.getLine();
+		int column = idToken.getCharPositionInLine();
+		s.Nondeclarer(id, line, column);
+	}
+
+	@Override
+	public void exitAssig4(LangageParser.Assig4Context ctx) {
+		String id = ctx.getChild(0).getText();
+		Token idToken = ((TerminalNode) ctx.ID()).getSymbol();
+		int line = idToken.getLine();
+		int column = idToken.getCharPositionInLine();
+		s.Nondeclarer(id, line, column);
+	}
+
+	@Override
+	public void exitAssig5(LangageParser.Assig5Context ctx) {
+		String id = ctx.getChild(0).getText();
+		Token idToken = ((TerminalNode) ctx.ID()).getSymbol();
+		int line = idToken.getLine();
+		int column = idToken.getCharPositionInLine();
+		s.Nondeclarer(id, line, column);
+	}
 }
 	
