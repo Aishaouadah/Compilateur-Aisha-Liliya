@@ -65,14 +65,12 @@ si : IF Parenthese_ouv logic_expression Parenthese_ferm Then Accolade_ouv statem
 sinon : ELSE Accolade_ouv statements Accolade_ferm;
 
 // Instruction d'ecriture
-print: PrintCompil
-                   Parenthese_ouv
-                   (listId|STRING)
-                   Parenthese_ferm
-                   PointVergule;
+print: PrintCompil Parenthese_ouv listId  Parenthese_ferm PointVergule #printcheck1
+       | PrintCompil Parenthese_ouv STRING  Parenthese_ferm PointVergule #printcheck2
+                   ;
 
 //Instruction de lecture
-scan : Scan Parenthese_ouv ID Vergule ID  Parenthese_ferm PointVergule  #scan2
+scan : Scan Parenthese_ouv  listId Parenthese_ferm PointVergule  #scan2
                 ;
 
 

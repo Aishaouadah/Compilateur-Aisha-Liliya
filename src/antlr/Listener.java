@@ -1,7 +1,6 @@
 package antlr;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.TerminalNode;
-
 import antlr.LangageParser.Ae2Context;
 import antlr.LangageParser.IdentifersContext;
 import antlr.LangageParser.Le1Context;
@@ -21,6 +20,8 @@ public class Listener extends LangageBaseListener {
 	Semantique s ;
 	int condition=0; // 0 faux 1 vrai
 	int i =0; //num de quad
+	boolean print = false;
+	boolean scan = false;
 
 	public Listener() {
 	 this.s=new Semantique();
@@ -35,22 +36,56 @@ public class Listener extends LangageBaseListener {
 		int column = idToken.getCharPositionInLine();
 		
 		s.AddElementTS(id, type, true,line,column);
-		
-		
+
+	if(print == true) {
+		String idprint = ctx.getChild(0).getText();
+		Token idTokenprint = ((TerminalNode) ctx.ID()).getSymbol();
+		int lineprint = idToken.getLine();
+		int columnprint = idToken.getCharPositionInLine();
+		s.Nondeclarer(idprint, lineprint, columnprint);
 	}
-	
+	if(scan == true)
+	{
+		String idprint = ctx.getChild(0).getText();
+		Token idTokenprint = ((TerminalNode) ctx.ID()).getSymbol();
+		int lineprint = idToken.getLine();
+		int columnprint = idToken.getCharPositionInLine();
+		s.Nondeclarer(idprint, lineprint, columnprint);
+	}
+	}
 
 	@Override
 	public void exitListIdentifiers(ListIdentifiersContext ctx) {
-		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 				String id = ctx.getChild(0).getText();
 				Token idToken = ctx.ID().getSymbol();
 				int line = idToken.getLine();
 				int column = idToken.getCharPositionInLine();
-				
 				s.AddElementTS(id, type, true,line,column);
-				
+	if (print == true) {
+		String idprint = ctx.getChild(0).getText();
+		Token idTokenprint = ((TerminalNode) ctx.ID()).getSymbol();
+		int lineprint = idToken.getLine();
+		int columnprint = idToken.getCharPositionInLine();
+		s.Nondeclarer(idprint, lineprint, columnprint);
+	}
+		if (scan == true) {
+			String idprint = ctx.getChild(0).getText();
+			Token idTokenprint = ((TerminalNode) ctx.ID()).getSymbol();
+			int lineprint = idToken.getLine();
+			int columnprint = idToken.getCharPositionInLine();
+			s.Nondeclarer(idprint, lineprint, columnprint);
+		}
+	}
+
+	@Override
+	public void enterPrintcheck1(LangageParser.Printcheck1Context ctx) {
+		print = true;
+	}
+
+	@Override
+	public void exitPrintcheck1(LangageParser.Printcheck1Context ctx) {
+		print = false ;
 	}
 
 	@Override
@@ -58,8 +93,6 @@ public class Listener extends LangageBaseListener {
 		// TODO Auto-generated method stub
 		type = ctx.getText();
 	}
-
-	
 
 	@Override
 	public void exitLe1(Le1Context ctx) {
@@ -70,7 +103,7 @@ public class Listener extends LangageBaseListener {
 		int column = idToken.getCharPositionInLine();
 		s.Nondeclarer(id, line, column);
 		//sauv dans qc
-		
+
 		
 		//child2
 		String id1 = ctx.getChild(2).getText();
@@ -81,7 +114,6 @@ public class Listener extends LangageBaseListener {
 		//sauv dans qc
 				
 	}
-
 	@Override
 	public void exitLe2(Le2Context ctx) {
 		// TODO Auto-generated method stub
@@ -133,7 +165,6 @@ public class Listener extends LangageBaseListener {
 		int line = idToken.getLine();
 		int column = idToken.getCharPositionInLine();
 		s.Nondeclarer(id, line, column);
-				
 	}
 
 	@Override
@@ -209,6 +240,14 @@ public class Listener extends LangageBaseListener {
 	//mise a jour de quad de saut vers fin 
 }
 
+	@Override
+	public void enterScan2(LangageParser.Scan2Context ctx) {
+	scan = true;
+	}
 
+	@Override
+	public void exitScan2(LangageParser.Scan2Context ctx) {
+		scan = false;
+	}
 }
 	

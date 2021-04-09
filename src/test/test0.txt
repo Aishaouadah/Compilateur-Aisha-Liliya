@@ -8,5 +8,5 @@ intCompil term1,term2,term55;
 start
 term1 = term2;
 lilya=55;
-if(3 < 2) then lilya =55;
+if(3 < 2) then {lilya =55;}
 }

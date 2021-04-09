@@ -1,10 +1,13 @@
-package antlr;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-/**
-* This interface defines a complete listener for a parse tree produced by
-* {@link LangageParser}.
-*/
+// Generated from Langage.g4 by ANTLR 4.9.2
 
+package antlr;
+
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+
+/**
+ * This interface defines a complete listener for a parse tree produced by
+ * {@link LangageParser}.
+ */
 public interface LangageListener extends ParseTreeListener {
 	/**
 	 * Enter a parse tree produced by the {@code Program}
@@ -377,15 +380,29 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitSinon(LangageParser.SinonContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LangageParser#print}.
+	 * Enter a parse tree produced by the {@code printcheck1}
+	 * labeled alternative in {@link LangageParser#print}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrint(LangageParser.PrintContext ctx);
+	void enterPrintcheck1(LangageParser.Printcheck1Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link LangageParser#print}.
+	 * Exit a parse tree produced by the {@code printcheck1}
+	 * labeled alternative in {@link LangageParser#print}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrint(LangageParser.PrintContext ctx);
+	void exitPrintcheck1(LangageParser.Printcheck1Context ctx);
+	/**
+	 * Enter a parse tree produced by the {@code printcheck2}
+	 * labeled alternative in {@link LangageParser#print}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrintcheck2(LangageParser.Printcheck2Context ctx);
+	/**
+	 * Exit a parse tree produced by the {@code printcheck2}
+	 * labeled alternative in {@link LangageParser#print}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrintcheck2(LangageParser.Printcheck2Context ctx);
 	/**
 	 * Enter a parse tree produced by the {@code scan2}
 	 * labeled alternative in {@link LangageParser#scan}.

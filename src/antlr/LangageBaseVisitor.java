@@ -1,7 +1,8 @@
+// Generated from Langage.g4 by ANTLR 4.9.2
+
 package antlr;
 
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
-
 
 /**
  * This class provides an empty implementation of {@link LangageVisitor},
@@ -242,7 +243,14 @@ public class LangageBaseVisitor<T> extends AbstractParseTreeVisitor<T> implement
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrint(LangageParser.PrintContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrintcheck1(LangageParser.Printcheck1Context ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitPrintcheck2(LangageParser.Printcheck2Context ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

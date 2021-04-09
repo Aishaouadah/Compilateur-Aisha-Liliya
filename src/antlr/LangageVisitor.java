@@ -230,11 +230,19 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitSinon(LangageParser.SinonContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LangageParser#print}.
+	 * Visit a parse tree produced by the {@code printcheck1}
+	 * labeled alternative in {@link LangageParser#print}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrint(LangageParser.PrintContext ctx);
+	T visitPrintcheck1(LangageParser.Printcheck1Context ctx);
+	/**
+	 * Visit a parse tree produced by the {@code printcheck2}
+	 * labeled alternative in {@link LangageParser#print}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPrintcheck2(LangageParser.Printcheck2Context ctx);
 	/**
 	 * Visit a parse tree produced by the {@code scan2}
 	 * labeled alternative in {@link LangageParser#scan}.
