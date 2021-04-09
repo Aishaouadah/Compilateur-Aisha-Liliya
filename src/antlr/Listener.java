@@ -269,9 +269,11 @@ public class Listener extends LangageBaseListener {
 	public void exitAssig2(LangageParser.Assig2Context ctx) {
 		String id = ctx.getChild(0).getText();
 		Token idToken = ((TerminalNode) ctx.ID()).getSymbol();
+
 		int line = idToken.getLine();
 		int column = idToken.getCharPositionInLine();
 		s.Nondeclarer(id, line, column);
+
 	}
 
 	@Override
@@ -281,6 +283,7 @@ public class Listener extends LangageBaseListener {
 		int line = idToken.getLine();
 		int column = idToken.getCharPositionInLine();
 		s.Nondeclarer(id, line, column);
+
 	}
 
 	@Override
@@ -290,6 +293,7 @@ public class Listener extends LangageBaseListener {
 		int line = idToken.getLine();
 		int column = idToken.getCharPositionInLine();
 		s.Nondeclarer(id, line, column);
+
 	}
 
 	@Override
