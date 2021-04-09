@@ -3,9 +3,6 @@ package antlr;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 
 
 public class Semantique {
@@ -55,10 +52,11 @@ public void printTS()
 }
 public void printTE()
 {
+	System.out.println("print table erreur");
+
 	for (ElementErreur er : TableErreur)
 	{
-		System.out.println("print table erreur");
-		System.out.println(er.toString());
+			System.out.println(er.toString());
 	}
 }
 public void printQuad()

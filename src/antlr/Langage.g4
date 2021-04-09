@@ -32,7 +32,7 @@ assignment: ID Affect ID PointVergule   #assig1
             | ID Affect STRING PointVergule #assig2
             | ID Affect INT PointVergule   #assig3
             | ID Affect FLOAT PointVergule #assig4
-            | ID arithmitic_expression PointVergule #assig5
+            | ID Affect arithmitic_expression  PointVergule #assig5
             ;
 
 logic_expression: ID LOGIC_OPERATORS ID         #le1
@@ -48,11 +48,11 @@ logic_expression: ID LOGIC_OPERATORS ID         #le1
                 ;
 
 //arithmitic expression
-arithmitic_expression: arithmitic_expression ARITHMITIC_OPERATORS arithmitic_expression #ae1
-					| ID 																#ae2
-					| INT																#ae3
-					| FLOAT																#ae4
-					;
+arithmitic_expression:  ID ARITHMITIC_OPERATORS arithmitic_expression       #ae1
+					|  	INT ARITHMITIC_OPERATORS arithmitic_expression  	#ae2
+					|   FLOAT ARITHMITIC_OPERATORS arithmitic_expression	#ae3
+					|  (ID|INT|FLOAT) ARITHMITIC_OPERATORS (ID|INT|FLOAT)  #ae4
+                    ;
 
 
 
@@ -87,6 +87,9 @@ Scan : 'scanCompil';
 Do : 'do';
 While :'while';
 ID : (UPPERCASE|LOWERCASE)(UPPERCASE|LOWERCASE|Number|'_')*;
+STRING : '"' ~('\r' | '\n' | '"')* '"' ;
+INT: (Plus|Minus)?(Number)+;
+FLOAT: (Plus|Minus)?(Number)+'.'(Number)+;
 
 
 Plus : '+';
@@ -107,13 +110,13 @@ Accolade_ferm : '}';
 PointVergule : ';';
 Vergule : ',';
 
-STRING : '"' ~('\r' | '\n' | '"')* '"' ;
-INT: (Plus|Minus)?(Number)+;
-FLOAT: (Plus|Minus)?(Number)+'.'(Number)+;
+
 
 Number : [0-9];
 LOWERCASE  : [a-z] ;
 UPPERCASE  : [A-Z] ;
+
+
 
 //Comments
 Comment: '/*' .*? '*/' -> skip;

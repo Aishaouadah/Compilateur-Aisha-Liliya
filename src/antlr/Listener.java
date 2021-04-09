@@ -285,16 +285,35 @@ public class Listener extends LangageBaseListener {
 
 
 	@Override
-	public void exitAe2(Ae2Context ctx) {
+	public void exitAe1(LangageParser.Ae1Context ctx) {
 		// TODO Auto-generated method stub
 		//child0
 		String id = ctx.getChild(0).getText();
-		Token idToken = ((TerminalNode) ctx.ID()).getSymbol();
+		Token idToken = ((TerminalNode) ctx.getChild(0)).getSymbol();
 		int line = idToken.getLine();
 		int column = idToken.getCharPositionInLine();
 		s.Nondeclarer(id, line, column);
-		//test
 	}
+	@Override
+	public void exitAe4(LangageParser.Ae4Context ctx) {
+		Token idToken = ((TerminalNode) ctx.getChild(0)).getSymbol();
+		int line = idToken.getLine();
+		int column = idToken.getCharPositionInLine();
+		String operand1= ctx.getChild(0).getText();
+		String operation= ctx.getChild(1).getText();
+		String operand2= ctx.getChild(2).getText();
+
+		if(operation.equals("/")  && (operand2.equals("0")))
+			//add err a la te
+			System.out.println("erreur division par 0 line = "+line+" column = "+column);
+	else
+			s.quadruplets.addQuadruplet(operation, operand1, operand2, "");
+
+		}
+
+
+
+
 
 
 	@Override public void enterLe10(LangageParser.Le10Context ctx) {

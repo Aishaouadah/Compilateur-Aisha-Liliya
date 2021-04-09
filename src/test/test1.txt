@@ -6,6 +6,10 @@ stringCompil chaine1,chaine68,chaine99;
 intCompil term1,term2,term55;
 
 start
+a = 1-+9;
+b = 9/3;
+//prblm avec a=4+5
+b = 4/0;
 term1 = term2;
 term2=term55;
 term2 = 555;
