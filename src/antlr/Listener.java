@@ -104,12 +104,11 @@ public class Listener extends LangageBaseListener {
 		s.Nondeclarer(id, line, column);
 		//sauv dans qc
 
-		
 		//child2
 		String id1 = ctx.getChild(2).getText();
 		Token idToken1 = ((TerminalNode) ctx.ID()).getSymbol();
-		int line1 = idToken.getLine();
-		int column1 = idToken.getCharPositionInLine();
+		int line1 = idToken1.getLine();
+		int column1 = idToken1.getCharPositionInLine();
 		s.Nondeclarer(id1, line1, column1);
 		//sauv dans qc
 				
@@ -250,7 +249,21 @@ public class Listener extends LangageBaseListener {
 		scan = false;
 	}
 
+	@Override
+	public void exitAssig1(LangageParser.Assig1Context ctx) {
+		String id = ctx.getChild(0).getText();
+		Token idToken = ((TerminalNode)ctx.getChild(0)).getSymbol();
+		int line = idToken.getLine();
+		int column = idToken.getCharPositionInLine();
+		s.Nondeclarer(id, line, column);
+		//sauv dans qc
 
+		String id1 = ctx.getChild(2).getText();
+		Token idToken1 =  ((TerminalNode) ctx.getChild(2)).getSymbol();
+		int line1 = idToken1.getLine();
+		int column1 = idToken1.getCharPositionInLine();
+		s.Nondeclarer(id1, line1, column1);
+	}
 
 	@Override
 	public void exitAssig2(LangageParser.Assig2Context ctx) {
