@@ -8,6 +8,10 @@ package antlr;
 code : 'compil' Prg_name Parenthese_ouv Parenthese_ferm Accolade_ouv declarations 'start' statements Accolade_ferm  #Program
 			; 
 
+//Instruction de lecture
+scan : Scan Parenthese_ouv  listId  Parenthese_ferm PointVergule  #scan2
+                ;
+
 //declaration part
 listId : ID Vergule listId #ListIdentifiers
 		|ID 			   #Identifers
@@ -32,7 +36,7 @@ assignment: ID Affect ID PointVergule   #assig1
             | ID Affect STRING PointVergule #assig2
             | ID Affect INT PointVergule   #assig3
             | ID Affect FLOAT PointVergule #assig4
-            | ID arithmitic_expression PointVergule #assig5
+            | ID Affect arithmitic_expression PointVergule #assig5
             ;
 
 logic_expression: ID LOGIC_OPERATORS ID         #le1
@@ -64,16 +68,13 @@ if_then_else : si  sinon?;
 si : IF Parenthese_ouv logic_expression Parenthese_ferm Then Accolade_ouv statements Accolade_ferm ;
 sinon : ELSE Accolade_ouv statements Accolade_ferm;
 
+
 // Instruction d'ecriture
-print: PrintCompil
-                   Parenthese_ouv
-                   (listId|STRING)
-                   Parenthese_ferm
-                   PointVergule;
+print: PrintCompil Parenthese_ouv listId  Parenthese_ferm PointVergule #printcheck1
+       | PrintCompil Parenthese_ouv STRING  Parenthese_ferm PointVergule #printcheck2
+                   ;
 
 //Instruction de lecture
-scan : Scan Parenthese_ouv ID Vergule ID  Parenthese_ferm PointVergule  #scan2
-                ;
 
 
 LOGIC_OPERATORS : (Sup|SupE|Inf|InfE|Equal|NEqual);

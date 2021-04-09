@@ -71,7 +71,7 @@ public void printQuad()
 {int i; 
 	System.out.println("les quad generer : ");
 	System.out.println("linked list quad is : ");
-	for(i = 0 ; i<quadruplets.size();i++) {	System.out.println("quad  "+quadruplets.getQuad(i).toString());}
+	for(i = 0; i<=quadruplets.size();i++) {	System.out.println("quad  "+quadruplets.getQuad(i).toString());}
 }
 
 }
