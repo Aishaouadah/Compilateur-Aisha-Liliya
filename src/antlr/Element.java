@@ -5,8 +5,10 @@ public class Element {
 	public String type;
 	public String valeur ;
 	public boolean declare;
-	
-	
+
+	public Element() {
+	}
+
 	public Element(String id, String type, boolean declare) {
 		this.id = id;
 		this.type = type;

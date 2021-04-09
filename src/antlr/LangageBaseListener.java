@@ -1,18 +1,19 @@
-// Generated from Langage.g4 by ANTLR 4.9.2
-
 package antlr;
-
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+public  class LangageBaseListener implements LangageListener {
+
+
+
 /**
- * This class provides an empty implementation of {@link LangageListener},
- * which can be extended to create a listener which only needs to handle a subset
- * of the available methods.
- */
-public class LangageBaseListener implements LangageListener {
+* This class provides an empty implementation of {@link LangageListener},
+* which can be extended to create a listener which only needs to handle a subset
+* of the available methods.
+*/
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -25,18 +26,6 @@ public class LangageBaseListener implements LangageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitProgram(LangageParser.ProgramContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterScan2(LangageParser.Scan2Context ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitScan2(LangageParser.Scan2Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -414,25 +403,25 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintcheck1(LangageParser.Printcheck1Context ctx) { }
+	@Override public void enterPrint(LangageParser.PrintContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintcheck1(LangageParser.Printcheck1Context ctx) { }
+	@Override public void exitPrint(LangageParser.PrintContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintcheck2(LangageParser.Printcheck2Context ctx) { }
+	@Override public void enterScan2(LangageParser.Scan2Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintcheck2(LangageParser.Printcheck2Context ctx) { }
+	@Override public void exitScan2(LangageParser.Scan2Context ctx) { }
 
 	/**
 	 * {@inheritDoc}

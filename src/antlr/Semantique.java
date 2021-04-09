@@ -26,11 +26,9 @@ public void AddElementTS(String id,String type ,boolean declared, int line , int
 		AddElementTE("Double declaration",line,column);
 	}
 	Element e = new Element(id,type,declared);
-	e.setValeur("--");
+	e.setValeur("0");
 	TableSymbol.put(id, e);
 }
-
-
 
 
 public void AddElementTE(String type_erreur,int line, int column )
@@ -38,8 +36,6 @@ public void AddElementTE(String type_erreur,int line, int column )
 	ElementErreur r = new ElementErreur(type_erreur,line,column);
 	TableErreur.add(r);
 }
-
-
 
 public void Nondeclarer(String id,int line, int column)
 {
@@ -49,8 +45,6 @@ public void Nondeclarer(String id,int line, int column)
 
 	}
 }
-
-
 
 public void printTS()
 {

@@ -3,10 +3,12 @@ compil Program()
 intCompil term1,term2;
 floatCompil div,divvvvvv;
 stringCompil chaine1,chaine68,chaine99;
-intCompil term1,term2,term55;
+intCompil term1,term2,term55,lilya;
 
 start
 term1 = term2;
+term1 = term2 + 1;
 lilya=55;
-if(3 < 2) then lilya =55;
+chaine1="ops";
+if(3 < 2) then {lilya =55;}
 }
