@@ -32,7 +32,7 @@ assignment: ID Affect ID PointVergule   #assig1
             | ID Affect STRING PointVergule #assig2
             | ID Affect INT PointVergule   #assig3
             | ID Affect FLOAT PointVergule #assig4
-            | ID arithmitic_expression PointVergule #assig5
+            | ID Affect arithmitic_expression PointVergule #assig5
             ;
 
 logic_expression: ID LOGIC_OPERATORS ID         #le1
