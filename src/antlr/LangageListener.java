@@ -22,18 +22,6 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitProgram(LangageParser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code scan2}
-	 * labeled alternative in {@link LangageParser#scan}.
-	 * @param ctx the parse tree
-	 */
-	void enterScan2(LangageParser.Scan2Context ctx);
-	/**
-	 * Exit a parse tree produced by the {@code scan2}
-	 * labeled alternative in {@link LangageParser#scan}.
-	 * @param ctx the parse tree
-	 */
-	void exitScan2(LangageParser.Scan2Context ctx);
-	/**
 	 * Enter a parse tree produced by the {@code ListIdentifiers}
 	 * labeled alternative in {@link LangageParser#listId}.
 	 * @param ctx the parse tree
@@ -415,4 +403,16 @@ public interface LangageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPrintcheck2(LangageParser.Printcheck2Context ctx);
+	/**
+	 * Enter a parse tree produced by the {@code scan2}
+	 * labeled alternative in {@link LangageParser#scan}.
+	 * @param ctx the parse tree
+	 */
+	void enterScan2(LangageParser.Scan2Context ctx);
+	/**
+	 * Exit a parse tree produced by the {@code scan2}
+	 * labeled alternative in {@link LangageParser#scan}.
+	 * @param ctx the parse tree
+	 */
+	void exitScan2(LangageParser.Scan2Context ctx);
 }

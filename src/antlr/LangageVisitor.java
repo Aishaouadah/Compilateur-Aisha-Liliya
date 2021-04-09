@@ -20,13 +20,6 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(LangageParser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code scan2}
-	 * labeled alternative in {@link LangageParser#scan}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitScan2(LangageParser.Scan2Context ctx);
-	/**
 	 * Visit a parse tree produced by the {@code ListIdentifiers}
 	 * labeled alternative in {@link LangageParser#listId}.
 	 * @param ctx the parse tree
@@ -250,4 +243,11 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitPrintcheck2(LangageParser.Printcheck2Context ctx);
+	/**
+	 * Visit a parse tree produced by the {@code scan2}
+	 * labeled alternative in {@link LangageParser#scan}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitScan2(LangageParser.Scan2Context ctx);
 }

@@ -26,13 +26,6 @@ public class LangageBaseVisitor<T> extends AbstractParseTreeVisitor<T> implement
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitScan2(LangageParser.Scan2Context ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	@Override public T visitListIdentifiers(LangageParser.ListIdentifiersContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -258,4 +251,11 @@ public class LangageBaseVisitor<T> extends AbstractParseTreeVisitor<T> implement
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitPrintcheck2(LangageParser.Printcheck2Context ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitScan2(LangageParser.Scan2Context ctx) { return visitChildren(ctx); }
 }
