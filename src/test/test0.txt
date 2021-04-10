@@ -6,9 +6,13 @@ stringCompil chaine1,chaine68,chaine99;
 intCompil term1,term2,term55,lilya;
 
 start
-term1 = term2;
+term = term2;
 term1 = term2 + 1;
 lilya=55;
 chaine1="ops";
+
+scanCompil (id,x);
+printCompil(i,i);
+
 if(3 < 2) then {lilya =55;}
 }

@@ -15,9 +15,9 @@ term2=term55;
 term2 = 555;
 lilya=55;
 scanCompil (id,x);
-scanCompil (i,i);
+printCompil(i,i);
 if( "aicha"== "ouadah") then {lilya =55;}
 if( 3< 4) then {a=b;} else {aicha = 5;}
-
+do { a =b; } while(a>b)
 
 }

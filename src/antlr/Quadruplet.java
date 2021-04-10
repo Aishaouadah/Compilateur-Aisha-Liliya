@@ -48,9 +48,8 @@ public class Quadruplet {
 		this.resultat = resultat;
 	}
 	  @Override
-	    public String toString()
-	    {
-	        return "("+operation+","+operateur1+","+operateur2+","+resultat+")";
-	    }
-	
-}
+	    public String toString() {
+		  return "(" + operation + "," + operateur1 + "," + operateur2 + "," + resultat + ")";
+
+
+	  }}

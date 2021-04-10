@@ -1,0 +1,24 @@
+compil Program()
+{
+//la declaration
+intCompil x1,y1;
+floatCompil x2,y2;
+stringCompil chaine1,chaine2,chaine3;
+/*debut de programme
+(instruction)*/
+start
+scanCompil(x1);
+y1=x1;
+do {
+x2=x1+1;
+y1=y1+1*5+6;
+} while (y1>0)
+chaine1="salut";
+x1= 5;
+
+scanCompil (id,x);
+
+printCompil(i,i);
+y1 = 8;
+if(x1<y1) then { printCompil("a est plus grand que b ");} else {printCompil("b est plus grand que b ");}
+}

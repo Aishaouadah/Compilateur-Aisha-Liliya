@@ -88,8 +88,8 @@ Do : 'do';
 While :'while';
 ID : (UPPERCASE|LOWERCASE)(UPPERCASE|LOWERCASE|Number|'_')*;
 STRING : '"' ~('\r' | '\n' | '"')* '"' ;
-INT: (Plus|Minus)?(Number)+;
-FLOAT: (Plus|Minus)?(Number)+'.'(Number)+;
+INT: (Number)+;
+FLOAT:(Number)+'.'(Number)+;
 
 
 Plus : '+';
