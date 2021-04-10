@@ -14,5 +14,15 @@ public class codeObjet {
     public codeObjet(String codeOp, String op1) {
         this.codeOp = codeOp;
         this.op1 = op1;
+
+    }
+
+    @Override
+    public String toString() {
+        return "codeObjet{" +
+                "codeOp='" + codeOp + '\'' +
+                ", op1='" + op1 + '\'' +
+                ", op2='" + op2 + '\'' +
+                '}';
     }
 }

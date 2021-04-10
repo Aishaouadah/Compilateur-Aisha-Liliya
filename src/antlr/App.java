@@ -11,7 +11,7 @@ public class App {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		CharStream input = (CharStream) CharStreams.fromFileName("C:\\Users\\User\\eclipse-workspace\\Compilateur-Aisha-Liliya\\src\\test\\test1.txt");
+		CharStream input = (CharStream) CharStreams.fromFileName("C:\\Users\\HP\\Documents\\compil\\Compilateur-Aisha-Liliya\\src\\test\\test0.txt");
 		LangageLexer lexer = new LangageLexer((org.antlr.v4.runtime.CharStream) input);
 		LangageParser parser = new 	LangageParser(new CommonTokenStream(lexer));
 		Listener l =new Listener();
@@ -21,6 +21,7 @@ public class App {
 	l.s.printTE();
 	l.s.printTS();
 	l.s.printQuad();
+	l.s.printCODEOBJET();
 	}
 
 }

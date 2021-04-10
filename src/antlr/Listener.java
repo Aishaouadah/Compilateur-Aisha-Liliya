@@ -423,6 +423,10 @@ public class Listener extends LangageBaseListener {
 		s.Nondeclarer(id, line, column);
 	}
 
+	@Override
+	public void exitProgram(LangageParser.ProgramContext ctx) {
+		s.ass.TraducQuad(s.quadruplets);
+	}
 }
 
 

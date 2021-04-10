@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Assembleur {
     public ArrayList<codeObjet> codeGen;
 
-    public Assembleur(ArrayList<codeObjet> codeGen) {
+    public Assembleur() {
         this.codeGen = new ArrayList<codeObjet>();
     }
     public void  TraducQuad(Quadruplets quads)
@@ -95,6 +95,14 @@ public class Assembleur {
         }
     }
 
+    public void printASS()
+    {
+        System.out.println("L'affichage du code objet");
 
+        for (codeObjet c : codeGen)
+        {
+            System.out.println(c.toString());
+        }
+    }
     }
 

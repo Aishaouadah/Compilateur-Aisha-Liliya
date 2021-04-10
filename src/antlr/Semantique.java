@@ -9,11 +9,13 @@ public class Semantique {
 	public HashMap <String,Element> TableSymbol;
 	public ArrayList <ElementErreur> TableErreur;
 	public Quadruplets quadruplets;
+	public Assembleur ass;
 public Semantique() {
 		
 		this.TableSymbol = new HashMap<String,Element>();
 		this.TableErreur = new ArrayList<ElementErreur>();
 		this.quadruplets  = new Quadruplets();
+		this.ass = new Assembleur();
 	}
 
 public void AddElementTS(String id,String type ,boolean declared, int line , int column)
@@ -64,6 +66,10 @@ public void printQuad()
 	System.out.println("les quad generer : ");
 	System.out.println("linked list quad is : ");
 	for(i = 0; i<=quadruplets.size();i++) {	System.out.println("quad  "+quadruplets.getQuad(i).toString());}
+}
+public void printCODEOBJET()
+{
+ass.printASS();
 }
 
 }
