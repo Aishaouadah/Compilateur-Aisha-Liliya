@@ -76,11 +76,11 @@ public class Assembleur {
                 codeGen.add(c2);
             }
             if(q.operation=="BZ") {
-                c2 = new codeObjet("JMP", q.operateur1);
+                c2 = new codeObjet("JZ", q.operateur1);
                 codeGen.add(c2);
             }
             if(q.operation=="BNZ") {
-                c2 = new codeObjet("JMP", q.operateur1);
+                c2 = new codeObjet("JNZ", q.operateur1);
                 codeGen.add(c2);
             }
             if(q.operation=="BR") {
