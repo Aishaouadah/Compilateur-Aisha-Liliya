@@ -12,8 +12,9 @@ public class Assembleur {
     {
     for (Quadruplet q : quads.quadruplets)
     {
+        //Operation
+
         if (q.operation =="*" || q.operation =="/" || q.operation=="+" || q.operation=="-" || q.operation=="=") {
-            //Operation
             codeObjet c = new codeObjet("MOV", "AX", q.operateur1);
             codeGen.add(c);
             if (q.operation == "*") {
@@ -94,7 +95,7 @@ public class Assembleur {
 
         }
     }
-
+  
     public void printASS()
     {
         System.out.println("L'affichage du code objet");

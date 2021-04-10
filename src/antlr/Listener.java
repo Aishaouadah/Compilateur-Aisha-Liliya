@@ -356,6 +356,7 @@ public class Listener extends LangageBaseListener {
 @Override public void exitSi(LangageParser.SiContext ctx) {
        //branchement vers la fin
 		 Sauv_BR = s.quadruplets.addQuadruplet("BR","","","");
+
 	    s.quadruplets.getQuad(Sauv_BZ-1).setOperateur1(""+(s.quadruplets.size()));
 	}
 
